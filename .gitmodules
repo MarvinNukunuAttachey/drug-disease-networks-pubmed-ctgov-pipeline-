@@ -1,0 +1,3 @@
+[submodule "pubtator-rag"]
+	path = pubtator-rag
+	url = https://github.com/Adi-M02/pubtator-rag.git
