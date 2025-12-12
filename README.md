@@ -184,10 +184,10 @@ Author
 Marvin Nukunu-Attachey
 Graduate Researcher – Health Informatics, University of Iowa
 
-Email: marvindee99@gmail.com
+Email: marvindee98@gmail.com
  · mnukunuattachey@uiowa.edu
 
 GitHub: https://github.com/MarvinNukunuAttachey
 
 Research Interests:
-Health Informatics, Interpretable Machine Learning, Drug–Disease Networks
+Health Informatics, Interpretable Machine Learning
