@@ -142,17 +142,13 @@ These metrics let us compare how **literature-based** evidence (PubMed) vs **tri
 ---
 
 ---
-
 ## PubTator RAG Integration (Submodule)
 
 This project integrates the **[`pubtator-rag`](https://github.com/Adi-M02/pubtator-rag)** repository as a **git submodule** to support PubTator-based retrieval, annotation, and graph construction.
 
-The submodule is located in the folder:
-
-`pubtator-rag/`
+The submodule is located in the folder: `pubtator-rag/`
 
 ### Why This Integration Matters
-
 Bringing in the PubTator RAG module allows this project to:
 
 - Enhance drug–disease analysis with PubTator-based entity recognition  
@@ -161,7 +157,6 @@ Bringing in the PubTator RAG module allows this project to:
 - Keep the PubTator code **automatically linkable** to upstream updates  
 
 ### Updating the Submodule
-
 When the original repository is updated, you can sync the latest changes with:
 
 ```bash
@@ -172,14 +167,13 @@ git add pubtator-rag
 git commit -m "Update pubtator-rag to latest upstream version"
 git push
 
-### Credits
+Credits
 
 Special thanks to Adi (GitHub: Adi-M02
 ) for developing and maintaining the original PubTator RAG framework.
 
 
-
-### Requirements
+Requirements
 
 You will need an R environment with the following packages:
 
@@ -191,7 +185,7 @@ install.packages(c(
 ))
 
 
-### Author
+Author
 
 Marvin Nukunu-Attachey
 Graduate Researcher – Health Informatics, University of Iowa
@@ -200,4 +194,5 @@ Email: marvindee99@gmail.com
 
 GitHub: https://github.com/MarvinNukunuAttachey
 
-Research Interests: Health Informatics, Interpretable ML, Drug–Disease Networks
+Research Interests: Health Informatics, Interpretable ML
+
