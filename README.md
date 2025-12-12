@@ -148,15 +148,8 @@ This project integrates the **[`pubtator-rag`](https://github.com/Adi-M02/pubtat
 
 The submodule is located in the folder: `pubtator-rag/`
 
-### Why This Integration Matters
-Bringing in the PubTator RAG module allows this project to:
-
-- Enhance drug–disease analysis with PubTator-based entity recognition  
-- Retrieve and process PubMed abstracts using RAG-style utilities  
-- Construct enriched PubMed knowledge graphs for downstream analysis  
-- Keep the PubTator code **automatically linkable** to upstream updates  
-
 ### Updating the Submodule
+
 When the original repository is updated, you can sync the latest changes with:
 
 ```bash
@@ -166,6 +159,12 @@ cd ..
 git add pubtator-rag
 git commit -m "Update pubtator-rag to latest upstream version"
 git push
+
+
+### Credits
+
+Special thanks to **Adi** (GitHub: [Adi-M02](https://github.com/Adi-M02)) for developing and maintaining the original PubTator RAG framework integrated into this project.
+
 
 ## Requirements
 
@@ -179,9 +178,6 @@ install.packages(c(
   "ggrepel"
 ))
 
-
-
----
 
 ## Author
 
@@ -197,4 +193,3 @@ https://github.com/MarvinNukunuAttachey
 
 **Research Interests:**  
 Health Informatics, Interpretable Machine Learning
-
