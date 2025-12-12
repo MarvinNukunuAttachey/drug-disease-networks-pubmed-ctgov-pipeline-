@@ -39,11 +39,11 @@ This same list is used across **both** data sources to keep everything aligned.
 
 1. **Query PubMed** for each drug using `entrez_search` and `entrez_fetch`.
 2. **Extract MeSH metadata**:
-   - PMID
-   - Article title
-   - MeSH descriptor terms
-   - Publication year
-   - Publication types
+   - PMID  
+   - Article title  
+   - MeSH descriptor terms  
+   - Publication year  
+   - Publication types  
 3. **Identify candidate diseases** from MeSH terms:
    - Keep terms containing patterns like `Disease`, `Syndrome`, `Disorder`, `Cancer`, `Infection`, `Failure`, `Diabetes`, `Pain`, `Stroke`, `Hypertension`.
    - Drop non-disease concepts such as `Animals`, `Healthy Volunteers`, `Method`, `Therapy`, etc.
@@ -52,23 +52,23 @@ This same list is used across **both** data sources to keep everything aligned.
 
 ### PubMed Outputs & Visuals
 
-- **Top diseases** by total PMID evidence
+- **Top diseases** by total PMID evidence  
 - **Drug breadth**:
-  - Number of unique diseases per drug
-  - Total PMIDs per drug
+  - Number of unique diseases per drug  
+  - Total PMIDs per drug  
 - **Scatter plot** of:
-  - X = number of diseases treated
-  - Y = total PMIDs
+  - X = number of diseases treated  
+  - Y = total PMIDs  
 - **Weighted network metrics**:
-  - Degree / strength for each drug
+  - Degree / strength for each drug  
 - **Disease co-annotation density**:
-  - How many drugs are mapped to each disease
+  - How many drugs are mapped to each disease  
 - **Publication year distribution**:
-  - Temporal trend of treatment evidence
+  - Temporal trend of treatment evidence  
 - **Top publication types**:
-  - Analogue to trial status categories
+  - Analogue to trial status categories  
 - **Networks**:
-  - Drug–disease bipartite network (using `igraph` + `ggraph`)
+  - Drug–disease bipartite network (using `igraph` + `ggraph`)  
   - Drug–drug co-treatment network:
     - Two drugs are connected if they treat at least one **shared disease**
     - Edge weight = shared evidence (min of weights, aggregated across diseases)
@@ -88,14 +88,14 @@ This same list is used across **both** data sources to keep everything aligned.
    - `query.intr = <drug>`
    - Pagination with `pageToken`.
 2. For each study, extract:
-   - NCT ID
-   - Brief title
-   - Overall status (e.g., Completed, Recruiting)
-   - Phases (e.g., Phase 2, Phase 3)
-   - Conditions (diseases)
-   - First submit date
+   - NCT ID  
+   - Brief title  
+   - Overall status (e.g., Completed, Recruiting)  
+   - Phases (e.g., Phase 2, Phase 3)  
+   - Conditions (diseases)  
+   - First submit date  
 3. Clean and **unnest conditions**:
-   - Split multiple conditions per study
+   - Split multiple conditions per study  
    - Drop generic non-disease phrases:
      - e.g., `Healthy Volunteer`, `Progression`, `Participant`, `Study`
 4. Build a **drug–disease edge list**:
@@ -103,20 +103,20 @@ This same list is used across **both** data sources to keep everything aligned.
 
 ### ClinicalTrials.gov Outputs & Visuals
 
-- **Top diseases** by total trial count
+- **Top diseases** by total trial count  
 - **Top drugs** by:
-  - Total number of trials
-  - Breadth: number of unique diseases per drug
-- **Breadth vs total trials** scatter for top drugs
-- **Distribution of trial phases** (Phase 1–4, etc.)
-- **Trial status distribution** (Completed, Recruiting, etc.)
+  - Total number of trials  
+  - Breadth: number of unique diseases per drug  
+- **Breadth vs total trials** scatter for top drugs  
+- **Distribution of trial phases** (Phase 1–4, etc.)  
+- **Trial status distribution** (Completed, Recruiting, etc.)  
 - **Disease co-annotation density**:
-  - Number of drugs per disease
+  - Number of drugs per disease  
 - **Yearly trend**:
-  - Number of trials by first submit year
+  - Number of trials by first submit year  
 - **Networks**:
-  - Drug–disease bipartite network
-  - Drug–drug co-treatment network for top drugs
+  - Drug–disease bipartite network  
+  - Drug–drug co-treatment network for top drugs  
 
 ---
 
@@ -124,14 +124,14 @@ This same list is used across **both** data sources to keep everything aligned.
 
 For both PubMed and ClinicalTrials.gov, the pipeline computes network-level stats using **`igraph`**:
 
-- Total nodes and edges
-- Number of drugs vs diseases
-- Density
-- Number of connected components
-- Giant component size
-- Average degree and median degree
-- Average path length
-- Diameter
+- Total nodes and edges  
+- Number of drugs vs diseases  
+- Density  
+- Number of connected components  
+- Giant component size  
+- Average degree and median degree  
+- Average path length  
+- Diameter  
 - For drug–drug networks:
   - Weighted degree (co-treatment strength)
 
@@ -139,9 +139,6 @@ These metrics let us compare how **literature-based** evidence (PubMed) vs **tri
 
 ---
 
----
-
----
 ## PubTator RAG Integration (Submodule)
 
 This project integrates the **[`pubtator-rag`](https://github.com/Adi-M02/pubtator-rag)** repository as a **git submodule** to support PubTator-based retrieval, annotation, and graph construction.
@@ -160,15 +157,18 @@ git add pubtator-rag
 git commit -m "Update pubtator-rag to latest upstream version"
 git push
 
+---
 
-### Credits
+## Credits
 
-Special thanks to **Adi** (GitHub: [Adi-M02](https://github.com/Adi-M02)) for developing and maintaining the original PubTator RAG framework integrated into this project.
+Special thanks to **Adi** (https://github.com/Adi-M02) for developing and maintaining  
+the original PubTator RAG framework used in this project.
 
+---
 
 ## Requirements
 
-You will need an R environment with the following packages installed:
+R (≥ 4.0) with the following packages:
 
 ```r
 install.packages(c(
@@ -178,18 +178,16 @@ install.packages(c(
   "ggrepel"
 ))
 
+```
+Author
 
-## Author
+Marvin Nukunu-Attachey
+Graduate Researcher – Health Informatics, University of Iowa
 
-**Marvin Nukunu-Attachey**  
-Graduate Researcher – Health Informatics, University of Iowa  
+Email: marvindee99@gmail.com
+ · mnukunuattachey@uiowa.edu
 
-**Email:**  
-marvindee99@gmail.com  
-mnukunuattachey@uiowa.edu  
+GitHub: https://github.com/MarvinNukunuAttachey
 
-**GitHub:**  
-https://github.com/MarvinNukunuAttachey  
-
-**Research Interests:**  
-Health Informatics, Interpretable Machine Learning
+Research Interests:
+Health Informatics, Interpretable Machine Learning, Drug–Disease Networks
