@@ -167,16 +167,11 @@ git add pubtator-rag
 git commit -m "Update pubtator-rag to latest upstream version"
 git push
 
-Credits
+## Requirements
 
-Special thanks to Adi (GitHub: Adi-M02
-) for developing and maintaining the original PubTator RAG framework.
+You will need an R environment with the following packages installed:
 
-
-Requirements
-
-You will need an R environment with the following packages:
-
+```r
 install.packages(c(
   "dplyr", "tidyr", "purrr", "stringr",
   "rentrez", "xml2", "httr", "jsonlite",
@@ -185,14 +180,21 @@ install.packages(c(
 ))
 
 
-Author
 
-Marvin Nukunu-Attachey
-Graduate Researcher – Health Informatics, University of Iowa
-Email: marvindee99@gmail.com
- · mnukunuattachey@uiowa.edu
+---
 
-GitHub: https://github.com/MarvinNukunuAttachey
+## Author
 
-Research Interests: Health Informatics, Interpretable ML
+**Marvin Nukunu-Attachey**  
+Graduate Researcher – Health Informatics, University of Iowa  
+
+**Email:**  
+marvindee99@gmail.com  
+mnukunuattachey@uiowa.edu  
+
+**GitHub:**  
+https://github.com/MarvinNukunuAttachey  
+
+**Research Interests:**  
+Health Informatics, Interpretable Machine Learning
 
